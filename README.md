@@ -10,7 +10,7 @@ I'm a passionate Computer Science student specializing in AI/ML at **Sathyabama 
 ---
 
 ## 🚀 About Me
-- 🎓 **Education**: B.E. in Computer Science (AI/ML), Sathyabama Institute (2022–2026)
+- 🎓 **Education**: B.E. in Computer Science (AI/ML), Sathyabama Institute of Science and Technology (2022–2026)
 - 💼 **Experience**: Full Stack Developer Intern at Omnex Software Solutions, AI Intern at TechSaksham (Microsoft, SAP, AICTE)
 - 🏆 **Achievements**: 1st Prize at Abhisarga’25 and Hackathon 2K24, Core Coordinator for HACKERA’25
 - 🌟 **Passion**: Building AI-driven applications, mastering full-stack development, and leading tech initiatives
@@ -72,7 +72,7 @@ _Competency Gap Analysis Software developed during internship_
 
 ## 🌍 Volunteering
 - **Core Coordinator, HACKERA’25**  
-  Organized a 24-hour national hackathon with 85+ teams and a ₹50,000 prize pool at Sathyabama Institute (April 2025)
+  Organized a 24-hour national hackathon with 85+ teams and a ₹50,000 prize pool at Sathyabama Institute of Science and Technology (April 2025)
 
 ---
 
