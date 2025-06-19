@@ -1,4 +1,4 @@
-# 👋 Hi, I'm Jeeva Karthikeyan
+# 👋 Hi, I'm Jeeva K
 
 ![Profile Views](https://img.shields.io/badge/Profile%20Views-0-blue)  
 Full Stack Developer | AI/ML Enthusiast | Hackathon Winner | Chennai, India
