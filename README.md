@@ -5,7 +5,7 @@ Full Stack Developer | AI/ML Enthusiast | Hackathon Winner | Chennai, India
 
 I'm a passionate Computer Science student specializing in AI/ML at **Sathyabama Institute of Science and Technology** (CGPA: 8.56/10). I thrive on solving complex problems and building innovative, scalable solutions using **Python**, **Django**, **Flutter**, and modern web technologies. As a proactive learner, I’ve contributed to real-world projects, led national hackathons, and secured first prizes in competitive events.
 
-📫 **Connect with me**: [Email](mailto:jeevakarthikeyan21v@gmail.com) | [LinkedIn](https://linkedin.com/in/jeeva-karthikeyan) | [Phone](tel:+918015871755)
+📫 **Connect with me**: [Email](mailto:jeevakarthikeyan21v@gmail.com) | [LinkedIn](https://linkedin.com/in/jeeva-karthikeyan) | +91 8015871755
 
 ---
 
