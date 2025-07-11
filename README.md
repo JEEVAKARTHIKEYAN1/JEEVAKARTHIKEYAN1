@@ -30,10 +30,6 @@ I'm a passionate Computer Science student specializing in AI/ML at **Sathyabama 
 ---
 
 ## 💻 Featured Projects
-### [Voice Vista](https://github.com/yourusername/voice-vista)  
-_A web application that converts voice input into video for presentations and education_  
-- **Tech Stack**: Python, Django, JavaScript, HTML, CSS  
-- **Impact**: Streamlined content creation for educators and professionals  
 
 ### [Wander Lens](https://github.com/yourusername/wander-lens)  
 _AI-powered travel companion with AR travel guide and personalized itineraries_  
@@ -44,11 +40,6 @@ _AI-powered travel companion with AR travel guide and personalized itineraries_
 _AI medical diagnostic system with 80% accuracy using Vision Transformers_  
 - **Tech Stack**: Python, Flask, React, MySQL  
 - **Impact**: Provides reliable second-opinion diagnostics  
-
-### [AR/VR Interior Designer](https://github.com/yourusername/arvr-interior-designer)  
-_Immersive virtual platform for interior design in VR_  
-- **Tech Stack**: Flutter, JavaScript, HTML, CSS, Firebase  
-- **Impact**: Enhanced user experience in virtual design spaces  
 
 ### [SkillApp](https://github.com/yourusername/skillapp)  
 _Competency Gap Analysis Software developed during internship_  
