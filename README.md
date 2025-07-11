@@ -31,17 +31,17 @@ I'm a passionate Computer Science student specializing in AI/ML at **Sathyabama 
 
 ## 💻 Featured Projects
 
-### [Wander Lens](https://github.com/yourusername/wander-lens)  
+### Wander Lens  
 _AI-powered travel companion with AR travel guide and personalized itineraries_  
 - **Tech Stack**: Python, Flutter, JavaScript, Firebase  
 - **Achievement**: Won 1st Prize at Abhisarga’25 Hackathon  
 
-### [NeuroMedX](https://github.com/yourusername/neuromedx)  
+### [NeuroMedX](https://github.com/JEEVAKARTHIKEYAN1/NeuroMedx.git)  
 _AI medical diagnostic system with 80% accuracy using Vision Transformers_  
 - **Tech Stack**: Python, Flask, React, MySQL  
 - **Impact**: Provides reliable second-opinion diagnostics  
 
-### [SkillApp](https://github.com/yourusername/skillapp)  
+### SkillApp
 _Competency Gap Analysis Software developed during internship_  
 - **Tech Stack**: Figma, Flutter, Django, MySQL  
 - **Impact**: Improved employee skill assessment for Omnex Software Solutions  
