@@ -33,7 +33,7 @@ I'm a passionate Computer Science student specializing in AI/ML at **Sathyabama 
 
 ### Wander Lens  
 _AI-powered travel companion with AR travel guide and personalized itineraries_  
-- **Tech Stack**: Python, Flutter, JavaScript, Firebase  
+- **Tech Stack**: Python, Flutter, Firebase,Gen AI, LLM
 - **Achievement**: Won 1st Prize at Abhisarga’25 Hackathon  
 
 ### [NeuroMedX](https://github.com/JEEVAKARTHIKEYAN1/NeuroMedx.git)  
