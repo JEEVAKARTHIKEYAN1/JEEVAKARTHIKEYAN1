@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recruit CRM - Company Profile (Wireframe)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="global-header">
+    <div class="brand">Recruit CRM</div>
+    <div class="global-actions">
+      <button class="btn ghost">Upgrade Account</button>
+      <button class="btn primary">Book a Demo</button>
+      <div class="icon-btn" title="Notifications">🔔</div>
+      <div class="avatar">JD</div>
+    </div>
+  </header>
+
+  <section class="company-header sticky">
+    <div class="company-identity">
+      <div class="company-avatar">DM</div>
+      <div>
+        <h1 class="company-name">Dunder Mifflin</h1>
+        <div class="company-meta">Scranton, PA • Paper & Packaging • <a href="#">dundermifflin.com</a></div>
+        <div class="company-social">
+          <span class="social">in</span>
+          <span class="social">tw</span>
+          <span class="social">fb</span>
+        </div>
+      </div>
+    </div>
+    <div class="company-quick-actions">
+      <button class="btn secondary">Add Job</button>
+      <button class="btn secondary">Log Activity</button>
+      <button class="btn secondary">Add Contact</button>
+    </div>
+  </section>
+
+  <section class="kpi-strip sticky">
+    <div class="kpi-card">
+      <div class="kpi-label">Jobs</div>
+      <div class="kpi-value">12</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Candidates Pitched</div>
+      <div class="kpi-value">34</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Contacts</div>
+      <div class="kpi-value">8</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Last Activity</div>
+      <div class="kpi-value">Mar 14, 2025</div>
+    </div>
+  </section>
+
+  <nav class="tabs sticky">
+    <button class="tab active">Overview</button>
+    <button class="tab">Contacts</button>
+    <button class="tab">Jobs</button>
+    <button class="tab">Candidates</button>
+    <button class="tab">Activities</button>
+    <button class="tab">Notes</button>
+  </nav>
+
+  <main class="container">
+    <div class="content">
+      <section class="overview-grid">
+        <div class="card tall">
+          <div class="card-header">Top Jobs <a href="#" class="view-all">View all</a></div>
+          <ul class="list">
+            <li>
+              <div class="title">Regional Manager</div>
+              <div class="meta">Active • 12 candidates • Updated 2d ago</div>
+            </li>
+            <li>
+              <div class="title">Sales Associate</div>
+              <div class="meta">On hold • 6 candidates • Updated 5d ago</div>
+            </li>
+            <li>
+              <div class="title">Warehouse Supervisor</div>
+              <div class="meta">Active • 9 candidates • Updated 1d ago</div>
+            </li>
+          </ul>
+        </div>
+        <div class="card tall">
+          <div class="card-header">Top Contacts <a href="#" class="view-all">View all</a></div>
+          <ul class="list contacts">
+            <li>
+              <div class="avatar sm">MS</div>
+              <div>
+                <div class="title">Michael Scott</div>
+                <div class="meta">Regional Manager • michael@dunder.com</div>
+              </div>
+            </li>
+            <li>
+              <div class="avatar sm">DW</div>
+              <div>
+                <div class="title">Dwight Schrute</div>
+                <div class="meta">Assistant to the Regional Manager • dwight@dunder.com</div>
+              </div>
+            </li>
+            <li>
+              <div class="avatar sm">PB</div>
+              <div>
+                <div class="title">Pam Beesly</div>
+                <div class="meta">Office Admin • pam@dunder.com</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="card tall">
+          <div class="card-header">Recent Activity <a href="#" class="view-all">Open timeline</a></div>
+          <ul class="timeline">
+            <li>
+              <div class="dot"></div>
+              <div>Logged call with Michael Scott <span class="time">Today 10:14 AM</span></div>
+            </li>
+            <li>
+              <div class="dot"></div>
+              <div>Added job “Warehouse Supervisor” <span class="time">Yesterday</span></div>
+            </li>
+            <li>
+              <div class="dot"></div>
+              <div>Pitched 3 candidates to Sales Associate <span class="time">2d ago</span></div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="about card">
+        <div class="card-header">About Company</div>
+        <div class="about-grid">
+          <div>
+            <div class="field"><span>Website</span><a href="#">dundermifflin.com</a></div>
+            <div class="field"><span>Industry</span>Paper & Packaging</div>
+            <div class="field"><span>State</span>Pennsylvania</div>
+            <div class="field muted"><span>Postal Code</span>Data not provided</div>
+            <div class="field muted"><span>Monster Board Company</span>Data not provided</div>
+          </div>
+          <div>
+            <div class="field"><span>Full Address</span>1725 Slough Ave, Scranton, PA 18505</div>
+            <div class="field"><span>Locality</span>Scranton</div>
+            <div class="field"><span>Country</span>United States</div>
+            <div class="field"><span>LinkedIn Company ID</span>1234567</div>
+            <div class="field"><span>Indeed Opted Out</span>No</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <aside class="sidebar">
+      <div class="card">
+        <div class="card-header">Quick Actions</div>
+        <div class="actions">
+          <button class="btn tertiary">Schedule Meeting</button>
+          <button class="btn tertiary">Create Task</button>
+          <button class="btn tertiary">Send Email</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">Upcoming</div>
+        <ul class="list">
+          <li>Call with Dwight <span class="time">Tomorrow 3:00 PM</span></li>
+          <li>Onsite at Scranton <span class="time">Fri 11:00 AM</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-header">Recent Notes</div>
+        <ul class="list">
+          <li>Michael prefers email follow-ups</li>
+          <li>Sales Associate role needs Excel skills</li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
