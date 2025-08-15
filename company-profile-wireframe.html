@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Profile - Recruit CRM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Global Header */
+        .global-header {
+            background: white;
+            border-bottom: 1px solid #e9ecef;
+            padding: 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .global-nav {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: none;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: #007bff;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0056b3;
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #545b62;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #007bff;
+            border: 1px solid #007bff;
+        }
+
+        .btn-outline:hover {
+            background: #007bff;
+            color: white;
+        }
+
+        /* Company Header */
+        .company-header {
+            background: white;
+            padding: 32px 24px 24px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .company-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 24px;
+        }
+
+        .company-info h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .company-location {
+            color: #6c757d;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-icon {
+            width: 32px;
+            height: 32px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+            text-decoration: none;
+        }
+
+        .quick-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        /* KPI Strip */
+        .kpi-strip {
+            background: white;
+            padding: 20px 24px;
+            border-bottom: 1px solid #e9ecef;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .kpi-card {
+            text-align: center;
+            padding: 16px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+
+        .kpi-number {
+            font-size: 28px;
+            font-weight: 700;
+            color: #007bff;
+            margin-bottom: 4px;
+        }
+
+        .kpi-label {
+            font-size: 14px;
+            color: #6c757d;
+            font-weight: 500;
+        }
+
+        /* Sticky Navigation */
+        .sticky-nav {
+            background: white;
+            border-bottom: 1px solid #e9ecef;
+            position: sticky;
+            top: 80px;
+            z-index: 999;
+        }
+
+        .nav-tabs {
+            display: flex;
+            padding: 0 24px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .nav-tab {
+            padding: 16px 24px;
+            border: none;
+            background: none;
+            color: #6c757d;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .nav-tab.active {
+            color: #007bff;
+            border-bottom-color: #007bff;
+        }
+
+        .nav-tab:hover {
+            color: #007bff;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 24px;
+            padding: 24px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .content-area {
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+            overflow: hidden;
+        }
+
+        .content-header {
+            padding: 20px 24px;
+            border-bottom: 1px solid #e9ecef;
+            background: #f8f9fa;
+        }
+
+        .content-header h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .content-body {
+            padding: 24px;
+        }
+
+        /* Overview Section */
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+
+        .overview-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid #e9ecef;
+        }
+
+        .overview-card h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #1a1a1a;
+        }
+
+        .overview-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .overview-item:last-child {
+            border-bottom: none;
+        }
+
+        .overview-item .title {
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .overview-item .value {
+            color: #007bff;
+            font-weight: 500;
+        }
+
+        /* Recent Activities */
+        .activity-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .activity-item:last-child {
+            border-bottom: none;
+        }
+
+        .activity-avatar {
+            width: 40px;
+            height: 40px;
+            background: #007bff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .activity-content {
+            flex: 1;
+        }
+
+        .activity-text {
+            font-size: 14px;
+            color: #495057;
+            margin-bottom: 4px;
+        }
+
+        .activity-time {
+            font-size: 12px;
+            color: #6c757d;
+        }
+
+        /* Right Sidebar */
+        .sidebar {
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+            height: fit-content;
+        }
+
+        .sidebar-section {
+            padding: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .sidebar-section:last-child {
+            border-bottom: none;
+        }
+
+        .sidebar-section h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #1a1a1a;
+        }
+
+        .quick-action-btn {
+            display: block;
+            width: 100%;
+            padding: 12px 16px;
+            margin-bottom: 8px;
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            color: #495057;
+            text-decoration: none;
+            text-align: center;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .quick-action-btn:hover {
+            background: #e9ecef;
+            border-color: #007bff;
+            color: #007bff;
+        }
+
+        .upcoming-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .upcoming-item:last-child {
+            border-bottom: none;
+        }
+
+        .upcoming-time {
+            background: #007bff;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .upcoming-text {
+            font-size: 14px;
+            color: #495057;
+        }
+
+        /* Search */
+        .search-box {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .kpi-strip {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .overview-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Global Header -->
+    <header class="global-header">
+        <div class="global-nav">
+            <h2 style="color: #007bff; font-weight: 600;">Recruit CRM</h2>
+        </div>
+        <div class="global-nav">
+            <button class="btn btn-outline">Book a Demo</button>
+            <button class="btn btn-secondary">Upgrade Account</button>
+            <div style="width: 32px; height: 32px; background: #f8f9fa; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <span style="font-size: 16px;">👤</span>
+            </div>
+            <div style="width: 32px; height: 32px; background: #f8f9fa; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <span style="font-size: 16px;">🔔</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Company Header -->
+    <section class="company-header">
+        <div class="company-title">
+            <div class="company-info">
+                <h1>Dunder Mifflin Paper Company</h1>
+                <div class="company-location">📍 Scranton, Pennsylvania, United States</div>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">🔗</a>
+                    <a href="#" class="social-icon">🐦</a>
+                    <a href="#" class="social-icon">📘</a>
+                </div>
+            </div>
+            <div class="quick-actions">
+                <button class="btn btn-primary">Add Job</button>
+                <button class="btn btn-outline">Log Activity</button>
+                <button class="btn btn-outline">Add Contact</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- KPI Strip -->
+    <section class="kpi-strip">
+        <div class="kpi-card">
+            <div class="kpi-number">12</div>
+            <div class="kpi-label">Active Jobs</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-number">47</div>
+            <div class="kpi-label">Contacts</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-number">23</div>
+            <div class="kpi-label">Candidates Pitched</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-number">2h ago</div>
+            <div class="kpi-label">Last Activity</div>
+        </div>
+    </section>
+
+    <!-- Sticky Navigation -->
+    <nav class="sticky-nav">
+        <div class="nav-tabs">
+            <button class="nav-tab active">Overview</button>
+            <button class="nav-tab">Contacts</button>
+            <button class="nav-tab">Jobs</button>
+            <button class="nav-tab">Candidates</button>
+            <button class="nav-tab">Activities</button>
+            <button class="nav-tab">Notes</button>
+            <button class="nav-tab">Deals</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-area">
+            <div class="content-header">
+                <h2>Company Overview</h2>
+            </div>
+            <div class="content-body">
+                <!-- Company Details -->
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <h3>Company Information</h3>
+                        <div class="overview-item">
+                            <span class="title">Industry</span>
+                            <span class="value">Paper & Office Supplies</span>
+                        </div>
+                        <div class="overview-item">
+                            <span class="title">Website</span>
+                            <span class="value">dundermifflin.com</span>
+                        </div>
+                        <div class="overview-item">
+                            <span class="title">Founded</span>
+                            <span class="value">1949</span>
+                        </div>
+                        <div class="overview-item">
+                            <span class="title">Size</span>
+                            <span class="value">50-200 employees</span>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-card">
+                        <h3>Top 3 Active Jobs</h3>
+                        <div class="overview-item">
+                            <span class="title">Sales Representative</span>
+                            <span class="value">5 candidates</span>
+                        </div>
+                        <div class="overview-item">
+                            <span class="title">Office Manager</span>
+                            <span class="value">3 candidates</span>
+                        </div>
+                        <div class="overview-item">
+                            <span class="title">Account Executive</span>
+                            <span class="value">7 candidates</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activities -->
+                <div class="overview-card">
+                    <h3>Recent Activities</h3>
+                    <div class="activity-item">
+                        <div class="activity-avatar">MS</div>
+                        <div class="activity-content">
+                            <div class="activity-text">Michael Scott logged a call with candidate Jim Halpert</div>
+                            <div class="activity-time">2 hours ago</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-avatar">DW</div>
+                        <div class="activity-content">
+                            <div class="activity-text">Dwight Schrute scheduled interview with Pam Beesly</div>
+                            <div class="activity-time">4 hours ago</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-avatar">PH</div>
+                        <div class="activity-content">
+                            <div class="activity-text">Pam Halpert added new job posting for Receptionist</div>
+                            <div class="activity-time">1 day ago</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3>Quick Actions</h3>
+                <a href="#" class="quick-action-btn">📞 Log Call</a>
+                <a href="#" class="quick-action-btn">📅 Schedule Meeting</a>
+                <a href="#" class="quick-action-btn">✅ Create Task</a>
+                <a href="#" class="quick-action-btn">📝 Add Note</a>
+                <a href="#" class="quick-action-btn">📧 Send Email</a>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Search & Filter</h3>
+                <input type="text" class="search-box" placeholder="Search contacts, jobs, activities...">
+                <button class="btn btn-outline" style="width: 100%;">🔍 Advanced Filter</button>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Upcoming Meetings</h3>
+                <div class="upcoming-item">
+                    <div class="upcoming-time">10:00</div>
+                    <div class="upcoming-text">Interview with Angela Martin</div>
+                </div>
+                <div class="upcoming-item">
+                    <div class="upcoming-time">14:30</div>
+                    <div class="upcoming-text">Client call - Staples</div>
+                </div>
+                <div class="upcoming-item">
+                    <div class="upcoming-time">16:00</div>
+                    <div class="upcoming-text">Team standup</div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Today's Tasks</h3>
+                <div class="upcoming-item">
+                    <div class="upcoming-time">9:00</div>
+                    <div class="upcoming-text">Review candidate applications</div>
+                </div>
+                <div class="upcoming-item">
+                    <div class="upcoming-time">15:00</div>
+                    <div class="upcoming-text">Follow up with hiring managers</div>
+                </div>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>
